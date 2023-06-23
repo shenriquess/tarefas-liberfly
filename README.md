@@ -16,34 +16,34 @@ Siga as etapas abaixo para configurar e executar a API:
 
 1. Clone o repositório:
 
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/shenriquess/tarefas-liberfly.git
 
 2. Instale as dependências:
 
-cd minha-api-de-tarefas
+cd minha-api-de-tarefas<br>
 composer install
 
 
 3. Configure o arquivo `.env` com as informações do banco de dados:
 
-cp .env.example .env
+cp .env.example .env<br>
 php artisan key:generate
 
 
 
 Abra o arquivo `.env` e configure as seguintes variáveis de ambiente:
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=nome_do_banco_de_dados
-DB_USERNAME=nome_de_usuario
+DB_CONNECTION=mysql<br>
+DB_HOST=127.0.0.1<br>
+DB_PORT=3306<br>
+DB_DATABASE=nome_do_banco_de_dados<br>
+DB_USERNAME=nome_de_usuario<br>
 DB_PASSWORD=senha_do_usuario
 
 
 4. Execute as migrações do banco de dados e semeie o banco com dados fictícios:
 
-php artisan db:seed --class=UserSeeder
+php artisan db:seed --class=UserSeeder<br>
 php artisan db:seed --class=TaskSeeder
 
 6. Acesse a documentação da API no navegador:
@@ -57,7 +57,7 @@ Nesta página, você encontrará detalhes sobre os endpoints disponíveis, seus 
 
 A API possui os seguintes endpoints:
 
-- `GET /api/tarefas`: Retorna uma lista de todas as tarefas cadastradas.
+- `GET /api/tarefas`: Retorna uma lista de todas as tarefas cadastradas.<br>
 - `GET /api/tarefas/{id}`: Retorna os detalhes de uma tarefa específica com base no ID fornecido.
 
 ## Executando as APIs pelo Postman
@@ -65,7 +65,7 @@ A API possui os seguintes endpoints:
 Você pode testar e executar as APIs da API de Gerenciamento de Tarefas usando o Postman. Siga as etapas abaixo para realizar as solicitações:
 
 1. Abra o Postman em sua máquina. Crie uma nova solicitação. Selecione o método HTTP como POST. Insira a URL do endpoint de login da sua API (por exemplo, http://localhost:8000/api/login). Vá para a seção "Body" na área de edição da solicitação. Selecione "raw" como o tipo de corpo (body).
-No menu suspenso ao lado de "raw", selecione "JSON". No campo de texto abaixo, insira as credenciais de login no formato JSON:
+No menu suspenso ao lado de "raw", selecione "JSON". No campo de texto abaixo, insira as credenciais de login no formato JSON: <br>
 
 {
     "email": "usuario@example.com",
@@ -84,8 +84,9 @@ http://localhost:8000/api/
 
 3. Selecione o método de solicitação adequado (GET, POST, PUT, DELETE) e adicione a rota do endpoint desejado, por exemplo:
 
-- `GET /tarefas`: Retorna todas as tarefas cadastradas.
+- `GET /tarefas`: Retorna todas as tarefas cadastradas.<br>
 - `GET /tarefas/{id}`: Retorna os detalhes de uma tarefa específica com base no ID fornecido.
+
 4. Adicione os parâmetros e/ou corpo da solicitação, conforme necessário.
 
 Por exemplo, para listar todas as tarefas, defina o método da solicitação como GET e insira a URL completa para a rota de tarefas. Por exemplo, http://localhost:8000/api/tarefas.
