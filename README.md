@@ -1,6 +1,6 @@
 # API de Gerenciamento de Tarefas
 
-Esta é uma API desenvolvida em Laravel para gerenciar tarefas. Ela permite a criação, atualização, listagem e exclusão de tarefas, além de fornecer endpoints para visualizar detalhes de tarefas específicas.
+Esta é uma API desenvolvida em Laravel para gerenciar tarefas. Ela permite listagem de tarefas, além de fornecer endpoints para visualizar detalhes de tarefas específicas.
 
 ## Requisitos
 
