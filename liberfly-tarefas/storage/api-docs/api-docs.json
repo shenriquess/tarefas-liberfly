@@ -1,0 +1,62 @@
+{
+    "openapi": "3.0.0",
+    "paths": {
+        "/api/tarefas": {
+            "get": {
+                "summary": "Lista as tarefas",
+                "operationId": "795847d7ac36a58cddccde1106e8b3ce",
+                "responses": {
+                    "200": {
+                        "description": "Retorna a lista de tarefas",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/tarefas/{id}": {
+            "get": {
+                "summary": "Exibe uma tarefa específica",
+                "operationId": "37733bfb296a6c7660d132c7153e51f1",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID da tarefa",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Retorna os detalhes da tarefa"
+                    },
+                    "404": {
+                        "description": "Tarefa não encontrada",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Tarefa não encontrada"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

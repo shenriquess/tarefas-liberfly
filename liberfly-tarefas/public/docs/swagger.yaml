@@ -1,0 +1,19 @@
+components:
+  schemas:
+    Task:
+      type: object
+      properties:
+        id:
+          type: integer
+        titulo:
+          type: string
+        descricao:
+          type: string
+        concluida:
+          type: boolean
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
